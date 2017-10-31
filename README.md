@@ -1,6 +1,6 @@
 # SyleFileCrator for INSPIRE
 
-The Arcmap plugin ìSyleFileCratorî creates symbol files for Inspire. 
+The Arcmap plugin ‚ÄúSyleFileCrator‚Äù creates symbol files for Inspire. 
 Test functionality with "testDb.mdb".
 
 ## Install
@@ -14,13 +14,13 @@ Execute the file "StyleFileCreator.esriAddIn".
 
 ## Versioning
 
-For the versions available, see the [tags on this repository](https://github.com/kaiarn/StyleFileCreator/tags). 
+For the versions available, see the [tags on this repository](https://github.com/geolba/StyleFileCreator/tags). 
 
 ## Authors
 
 * **Arno Kaimbacher** - *Initial work* 
 
-See also the list of [contributors](https://github.com/kaiarn/StyleFileCreator/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/geolba/StyleFileCreator/contributors) who participated in this project.
 
 ## License
 
