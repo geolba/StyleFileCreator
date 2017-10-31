@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="StyleFileCreator.App.View.AboutView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:StyleFileCreator.App.View"
+             mc:Ignorable="d" Width="297" Height="164"
+             d:DesignHeight="200" d:DesignWidth="297">
+    <Border CornerRadius="12,12,12,12"
+          BorderBrush="#FF020202"
+          BorderThickness="0,0,0,0"
+          Height="Auto">
+        <!--<Border.Background>
+            <LinearGradientBrush>
+                <GradientStop Offset="0.0" Color="AliceBlue" />
+                <GradientStop Offset="1.0" Color="LightSteelBlue" />
+            </LinearGradientBrush>
+        </Border.Background>-->
+        <Canvas>
+            <!--Close button-->
+            <!--<Button Canvas.Left="264" Canvas.Top="12" Height="0" Width="0">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Canvas>
+                            <Rectangle Width="15" Height="15" Stroke="Black" RadiusX="3" RadiusY="3">
+                                <Rectangle.Fill>
+                                    <SolidColorBrush x:Name="myAnimatedBrush" Color="Red" />
+                                </Rectangle.Fill>
+                            </Rectangle>
+                            <Line X1="3" Y1="3" X2="12" Y2="12" Stroke="White" StrokeThickness="2"></Line>
+                            <Line X1="12" Y1="3" X2="3" Y2="12" Stroke="White" StrokeThickness="2"></Line>
+                        </Canvas>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>-->
+            <!--<Label Canvas.Left="15" Canvas.Top="12" Content="Inspire stylefile creator" Height="34" Name="lblUeberschrift" FontWeight="SemiBold" FontStyle="Normal" FontSize="18" FontFamily="Verdana" Width="249" />-->
+            <Label Canvas.Left="0" Canvas.Top="12" Content="Product: Inspire StyleFileCreator" Height="28" Name="lblProduct" Width="249" />
+            <Label Canvas.Left="0" Canvas.Top="32" Content="Version: 1.7" Height="28" Name="lblVersion" Width="249" />
+            <Label Canvas.Left="0" Canvas.Top="58" Content="Company: Federal Geological Office Vienna (GBA)" Height="28" Name="lblCompanyName" />
+            <Label Canvas.Left="0" Canvas.Top="84" Content="ReleaseDate: 31-10-2017" Height="28" Name="lblProgrammer" Width="267" />
+            <Label Canvas.Left="0" Canvas.Top="110" Content="Developer: Arno Kaimbacher" Height="28" Name="lblProgramer" Width="249" />
+            <Label Canvas.Left="0" Canvas.Top="136" Content="Copyright: GBA" Height="28" Name="lblCopyright" Width="249" />
+        </Canvas>
+
+    </Border>
+</UserControl>

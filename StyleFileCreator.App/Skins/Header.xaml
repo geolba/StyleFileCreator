@@ -1,0 +1,191 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="HeaderPanelStyle" TargetType="Grid">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="#FF3B3B3B" Offset="0.0"/>
+                    <GradientStop Color="#FF525252" Offset="0.5"/>
+                    <GradientStop Color="#FF3B3B3B" Offset="1.0"/>
+                </LinearGradientBrush>
+                <!--<LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#FF3B3B3B" Offset="0"/>
+                    <GradientStop Color="#FF14A7C1" Offset="1"/>
+                    <GradientStop Color="#FF1E424E" Offset="0.5"/>                 
+                </LinearGradientBrush>-->
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Height" Value="80"/>
+    </Style>
+ 
+    <Style TargetType="Button" x:Key="BaseHeaderButtonStyle">
+        <Setter Property="FontSize" Value="16"/>
+        <Setter Property="FontWeight" Value="Normal"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="Cursor" Value="Hand"/>
+    </Style>
+
+    <Style x:Key="MasterDataButtonStyle" BasedOn="{StaticResource BaseHeaderButtonStyle}" TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Margin="2 20 2 0" CornerRadius="3 3 0 0" BorderBrush="#FF2B2B2B" BorderThickness="1 1 1 0">
+                        <DockPanel x:Name="Button">
+                            <ContentPresenter 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </DockPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="Button">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FF414141" Offset="0.2"/>
+                                        <GradientStop Color="#FF272727" Offset="0.9"/>                                  
+                                        <GradientStop Color="CadetBlue" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+
+                        <DataTrigger Binding="{Binding CurrentPage.DisplayName}" Value="MasterDataViewModelAT">
+                            <Setter Property="Background" TargetName="Button">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FF414141" Offset="0.2"/>
+                                        <GradientStop Color="#FF272727" Offset="0.9"/>                                      
+                                        <GradientStop Color="CadetBlue" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+  
+    <Style x:Key="ReportButtonStyle" 
+               BasedOn="{StaticResource BaseHeaderButtonStyle}" 
+               TargetType="Button">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border x:Name="border" Margin="2 20 2 0" CornerRadius="3 3 0 0" BorderBrush="#FF2B2B2B" BorderThickness="1 1 1 0">
+                        <DockPanel x:Name="Button">
+                            <ContentPresenter 
+                                HorizontalAlignment="Center" 
+                                VerticalAlignment="Center"/>
+                        </DockPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="Button">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FF414141" Offset="0.2"/>
+                                        <GradientStop Color="#FF272727" Offset="0.9"/>
+                                        <!--<GradientStop Color="#FFE900" Offset="1.0"/>-->
+                                        <GradientStop Color="CadetBlue" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                        
+                        <DataTrigger Binding="{Binding CurrentDetailData.AreaType}" Value="ReportViewModelAT">
+                            <Setter Property="Background" TargetName="Button">
+                                <Setter.Value>
+                                    <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                        <GradientStop Color="#FF414141" Offset="0.2"/>
+                                        <GradientStop Color="#FF272727" Offset="0.9"/>
+                                        <!--<GradientStop Color="#FFE900" Offset="1.0"/>-->
+                                        <GradientStop Color="CadetBlue" Offset="1.0"/>
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="HeaderStyle" TargetType="TextBlock">
+        <Setter Property="FontSize" Value="20"/>
+        <Setter Property="Foreground" Value="#ccc"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontStretch" Value="ExtraExpanded"/>
+        <Setter Property="FontStyle" Value="Italic"/>
+        <Setter Property="Width" Value="150"/>
+        <Setter Property="RenderTransform">
+            <Setter.Value>
+                <ScaleTransform ScaleY="3.4" ScaleX="1.9"/>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Margin" Value="5 0 20 0"/>
+    </Style>
+
+    <Style TargetType="{x:Type HeaderedContentControl}">
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type HeaderedContentControl}">
+                    <StackPanel Margin="2,0">
+                        <Grid Margin="1,1,1,12" RenderTransformOrigin="0.5,0.5">
+                            <Rectangle
+                  Fill="BurlyWood"
+                  Height="3"
+                  Margin="10,0"
+                  Opacity="0.6"
+                  RadiusX="8"
+                  RadiusY="8"
+                  VerticalAlignment="Bottom" 
+                  />
+                            <ContentPresenter
+                  ContentSource="Header"
+                  TextBlock.FontSize="22"
+                  TextBlock.FontWeight="DemiBold"
+                  TextBlock.Foreground="Brown"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center" 
+                  />
+                            <Grid.Effect>
+                                <DropShadowEffect Opacity="0.1" />
+                            </Grid.Effect>
+                            <Grid.RenderTransform>
+                                <RotateTransform Angle="-3" />
+                            </Grid.RenderTransform>
+                        </Grid>
+                        <Grid>
+                            <Rectangle Fill="{TemplateBinding Background}" />
+                            <ContentPresenter ContentSource="Content" />
+                        </Grid>
+                    </StackPanel>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <!-- WIZARD STEP TEMPLATE -->
+    <DataTemplate x:Key="wizardStepTemplate">
+        <Border x:Name="bdOuter" BorderBrush="Black" BorderThickness="0,0,1,1" CornerRadius="12" Margin="1,1,1,12" Opacity="0.25" SnapsToDevicePixels="True">
+            <Border x:Name="bdInner" Background="#FFFEFEFE" BorderBrush="Brown" BorderThickness="2,2,1,1" CornerRadius="12" Padding="2">
+                <TextBlock x:Name="txt" Margin="4,0,0,0" Text="{Binding Path=DisplayName}"></TextBlock>
+            </Border>
+        </Border>
+        <DataTemplate.Triggers>
+            <DataTrigger Binding="{Binding Path=IsCurrentPage}" Value="True">
+                <Setter TargetName="txt" Property="FontWeight" Value="Bold" />
+                <Setter TargetName="bdInner" Property="Background" Value="BurlyWood" />
+                <Setter TargetName="bdOuter" Property="Opacity" Value="1" />
+            </DataTrigger>
+        </DataTemplate.Triggers>
+    </DataTemplate>
+   
+
+</ResourceDictionary>

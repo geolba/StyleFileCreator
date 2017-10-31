@@ -1,0 +1,28 @@
+﻿<UserControl x:Class="StyleFileCreator.App.View.WelcomeView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             mc:Ignorable="d" xmlns:vm="clr-namespace:StyleFileCreator.App.ViewModel"
+              xmlns:view="clr-namespace:StyleFileCreator.App.View"  
+             d:DesignHeight="300" d:DesignWidth="300">
+    <UserControl.Resources>
+        <vm:ViewModelLocator x:Key="Locator" d:IsDataSource="True" />
+    </UserControl.Resources>
+
+    <Grid  DataContext="{Binding Welcome, Source={StaticResource Locator}}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*" />
+            <RowDefinition Height="1*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>          
+            <ColumnDefinition Width="1*"/>           
+        </Grid.ColumnDefinitions>
+        <!--<TextBlock FontSize="36" FontWeight="Bold" Foreground="Purple" Text="{Binding WelcomeTitle}"  VerticalAlignment="Center"
+                   HorizontalAlignment="Center" TextWrapping="Wrap" />-->
+        <TextBlock Text="{Binding WelcomeTitle}" Height="34" Name="lblUeberschrift" FontWeight="SemiBold" FontStyle="Normal" FontSize="18" FontFamily="Verdana" Width="249" Margin="2,16,49,0" />
+
+        <!--<Button Grid.Row="1" Content="Info" Width="25" Command="{Binding Path=ShowAboutCommand}"/>-->
+        <view:AboutView Grid.Row="1"></view:AboutView>
+    </Grid>
+</UserControl>

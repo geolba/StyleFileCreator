@@ -1,0 +1,43 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"                 
+                     xmlns:vm="clr-namespace:StyleFileCreator.App.ViewModel"
+                     xmlns:viewn="clr-namespace:StyleFileCreator.App.View">
+
+
+
+    <DataTemplate DataType="{x:Type vm:SettingsViewModel}">
+        <StackPanel Margin="20 20 0 10">
+            <viewn:SettingsView/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:WelcomeViewModel}">
+        <viewn:WelcomeView />
+    </DataTemplate>
+
+
+    <DataTemplate DataType="{x:Type vm:GeometryTypeViewModel}">
+        <StackPanel Margin="20 20 0 10">
+            <viewn:GeometryTypeView/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:DataViewModel}">
+        <StackPanel Margin="20 20 0 10">
+            <viewn:DataView/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:ExportViewModel}">
+        <StackPanel Margin="20 20 0 10">
+            <viewn:ExportView/>
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate DataType="{x:Type vm:AboutViewModel}">
+        <StackPanel Margin="20 20 0 10">
+            <viewn:AboutView/>
+        </StackPanel>
+    </DataTemplate>
+
+</ResourceDictionary>
