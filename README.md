@@ -1,4 +1,4 @@
-# SyleFileCrator m for INSPIRE
+# StyleFileCreator for INSPIRE
 
 The Arcmap plugin “SyleFileCrator” creates symbol files for Inspire. 
 Test functionality with "testDb.mdb".
